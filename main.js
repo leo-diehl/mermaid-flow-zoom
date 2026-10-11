@@ -452,6 +452,9 @@ class MermaidZoomInstance {
         lastAutoWidth: this.lastAutoWidth,
       };
 
+      // Inline sizes from auto-sizing or manual resizing would override the fullscreen CSS.
+      this.container.style.width = "";
+      this.container.style.height = "";
       document.body.appendChild(this.container);
       this.container.classList.add("is-fullscreen");
       this.fullscreenButton.textContent = "⤢";

@@ -74,6 +74,11 @@ body.mfz-fullscreen-open {
   overflow: visible;
 }
 
+/* Obsidian darkens diagrams with `.theme-dark .mermaid > svg`, which stops matching once the svg is moved in here. */
+.theme-dark .mermaid .mfz-content > svg {
+  filter: invert(100%) hue-rotate(180deg) saturate(1.25);
+}
+
 .mfz-toolbar {
   position: absolute;
   top: 8px;
